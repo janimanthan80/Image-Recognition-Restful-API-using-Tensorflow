@@ -75,7 +75,7 @@ def verifyCredentials(username, password):
         return generateReturnDictionary(302, 'Invalid Password'), True
 
     return None, False
-class classify(Resource):
+class Classify(Resource):
     def post(self):
         postedData = request.get_json()
 
@@ -141,7 +141,7 @@ class Refill(Resource):
 
 
 api.add_resource(Register, '/register')
-api.add_resource(classify, '/classify')
+api.add_resource(Classify, '/classify')
 api.add_resource(Refill, '/refill')
 
 if __name__ == "__main__":
